@@ -8,7 +8,7 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index', ['filter' => 'auth']);
 
 $routes->get('login','AuthController::login'); //menampilkan halaman login
-$routes->post('login','AuthController::login', ['filter' => 'redirect']); //mengirim data user login
+$routes->post('login','AuthController::login'); //mengirim data user login , ['filter' => 'redirect']
 $routes->get('logout','AuthController::logout'); //akhiri sesi
 
 $routes->group('produk', ['filter' => 'auth'], function ($routes) { 
