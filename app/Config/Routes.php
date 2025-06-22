@@ -8,7 +8,7 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index', ['filter' => 'auth']);
 
 $routes->get('login','AuthController::login'); //menampilkan halaman login
-$routes->post('login','AuthController::login'); //mengirim data user login , ['filter' => 'redirect']
+$routes->post('login','AuthController::login', ['filter' => 'redirect']); //mengirim data user login , ['filter' => 'redirect']
 $routes->get('logout','AuthController::logout'); //akhiri sesi
 
 $routes->group('produk', ['filter' => 'auth'], function ($routes) { 
@@ -34,6 +34,11 @@ $routes->group('keranjang', ['filter' => 'auth'], function ($routes) {
     $routes->get('clear', 'TransaksiController::cart_clear'); //untuk mengosongkan keranjang belanja
 });
 
-$routes->get('faq','Home::faq', ['filter' => 'auth']);
-$routes->get('profile','Home::profile', ['filter' => 'auth']);
-$routes->get('contact','Home::contact', ['filter' => 'auth']);
+$routes->get('checkout', 'TransaksiController::checkout', ['filter' => 'auth']);
+$routes->post('buy', 'TransaksiController::buy', ['filter' => 'auth']);
+$routes->get('get-location', 'TransaksiController::getLocation', ['filter' => 'auth']);
+$routes->get('get-cost', 'TransaksiController::getCost', ['filter' => 'auth']);
+
+$routes->get('faq','FaqController::index', ['filter' => 'auth']);
+$routes->get('profile','ProfileController::index', ['filter' => 'auth']);
+$routes->get('contact','ContactController::index', ['filter' => 'auth']);
