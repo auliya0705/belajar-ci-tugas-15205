@@ -16,6 +16,15 @@
         </form>
     </div><!-- End Search Bar -->
 
+    </div><?php if (session()->has('diskon')): ?>
+    <div class="ms-3">
+        <a class="btn btn-success btn-sm" href="#">
+            Hari ini ada diskon <?= number_to_currency(session()->get('diskon'), 'IDR') ?> per item
+        </a>
+    </div>
+    <?php endif; ?>
+    <!-- End Discount -->
+
     <nav class="header-nav ms-auto">
         <ul class="d-flex align-items-center">
 

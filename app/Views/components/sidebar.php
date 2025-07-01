@@ -35,6 +35,34 @@
         if (session()->get('role') == 'admin'){
         ?>
         <li class="nav-item">
+            <a class="nav-link <?php echo (uri_string() == 'diskon') ? "" : "collapsed" ?>" href="diskon">
+                <i class="bi bi-tag-fill"></i>
+                <span>Diskon</span>
+            </a>
+        </li>
+        <?php
+        }
+        ?>
+        <!-- End Diskon Nav -->
+
+        <?php
+        if (session()->get('role') == 'admin'){
+        ?>
+        <li class="nav-item">
+            <a class="nav-link <?php echo (uri_string() == 'pembelian') ? "" : "collapsed" ?>" href="pembelian">
+                <i class="bi bi-receipt"></i>
+                <span>Pembelian</span>
+            </a>
+        </li>
+        <?php
+        }
+        ?>
+        <!-- End Diskon Nav -->
+
+        <?php
+        if (session()->get('role') == 'admin'){
+        ?>
+        <li class=" nav-item">
             <a class="nav-link <?php echo (uri_string() == 'productcategory') ? "" : "collapsed" ?>"
                 href="productcategory">
                 <i class="bi bi-receipt"></i>
@@ -44,7 +72,7 @@
         <?php
         }
         ?>
-        <!-- End Produk Nav -->
+        <!-- End ProdukCategory Nav -->
 
         <li class="nav-item">
             <a class="nav-link <?php echo (uri_string() == 'profile') ? "" : "collapsed" ?>" href="profile">

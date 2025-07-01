@@ -18,11 +18,14 @@ class Redirect implements FilterInterface
     public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)
     {
         // Cek apakah user berhasil login
-        $session = session();
-        if ($session->get('isLoggedIn') && current_url() === base_url('login')) {
-            return redirect()->to(base_url('contact'));
+        if (session()->has('isLoggedIn')) {
+            return redirect()->to(site_url('contact'));
         }
+        // $session = session();
+        // if ($session->get('isLoggedIn') && current_url() === base_url('login')) {
+        //     return redirect()->to(base_url('contact'));
+        // }
 
-        return $response;
+        // return $response;
     }
 }
