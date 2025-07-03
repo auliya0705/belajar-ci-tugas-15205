@@ -65,61 +65,61 @@ Sebelum memulai membuat projek, ada beberapa hal yang harus terpasang pada lapto
 1. app/
    - Controllers :
      Berisi "otak" dari aplikasi yang mengatur alur program.
-     ApiController.php
-     AuthController.php
-     BaseController.php
-     ContactController.php
-     DiskonController.php
-     FaqController.php
-     Home.php
-     PembelianController.php
-     ProductCategoryController.php
-     ProdukController.php
+     ApiController.php,
+     AuthController.php,
+     BaseController.php,
+     ContactController.php,
+     DiskonController.php,
+     FaqController.php,
+     Home.php,
+     PembelianController.php,
+     ProductCategoryController.php,
+     ProdukController.php,
      TransaksiController.php
      
    - Models :
      Berisi file-file yang berfungsi sebagai jembatan ke database.
-     DiskonModel.php
-     ProductCategoryModel.php
-     ProductModel.php
-     TransactionDetailModel.php
-     TransactionModel.php
+     DiskonModel.php,
+     ProductCategoryModel.php,
+     ProductModel.php,
+     TransactionDetailModel.php,
+     TransactionModel.php,
      UserModel.php
      
    - Views :
      Berisi semua file tampilan (HTML) yang dilihat oleh pengguna.
-     Folder components (header.php, sidebar.php, footer.php)
-     layout.php
-     layout_clear.php
-     v_checkout.php
-     v_contact.php
-     v_diskon.php
-     v_faq.php
-     v_home.php
-     v_keranjang.php
-     v_login.php
-     v_pembelian.php
-     v_productcategory.php
-     v_produk.php
-     v_produkPDF.php
-     v_profile.php
+     Folder components (header.php, sidebar.php, footer.php),
+     layout.php,
+     layout_clear.php,
+     v_checkout.php,
+     v_contact.php,
+     v_diskon.php,
+     v_faq.php,
+     v_home.php,
+     v_keranjang.php,
+     v_login.php,
+     v_pembelian.php,
+     v_productcategory.php,
+     v_produk.php,
+     v_produkPDF.php,
+     v_profile.php,
      
    - Database :
      - Migrations :
-       2025-05-09-143741_Product.php
-       2025-05-09-143753_Transaction.php
-       2025-05-09-143808_TransactionDetail.php
-       2025-05-10-091753_ProductCategory.php
-       2025-05-20-105602_User.php
+       2025-05-09-143741_Product.php,
+       2025-05-09-143753_Transaction.php,
+       2025-05-09-143808_TransactionDetail.php,
+       2025-05-10-091753_ProductCategory.php,
+       2025-05-20-105602_User.php,
        2025-06-30-153312_Diskon.php
      - Seeders :
-       DiskonSeeder.php
-       ProductCategorySeeder.php
-       ProductSeeder.php
+       DiskonSeeder.php,
+       ProductCategorySeeder.php,
+       ProductSeeder.php,
        UserSeeder.php
        
    - Config :
-     Routes.php untuk mengatur URL
+     Routes.php untuk mengatur URL,
      Filters.php untuk keamanan halaman
 3. public/
    - dashboard-toko
